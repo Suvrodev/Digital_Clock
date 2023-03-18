@@ -76,3 +76,56 @@ const UpdateClock=()=>{
 UpdateClock();
 setInterval(UpdateClock,1000);
 ///Second Clock End
+
+
+///Date Distance Start
+const DateSubmitButton=document.getElementById('date_submit');
+const DisplayDay=document.getElementById('displayday');
+const First_Date=document.getElementById('first_date');
+const Second_Date=document.getElementById('second_date');
+
+DisplayDay.style.display='none'
+
+
+
+DateSubmitButton.addEventListener('click',()=>{
+    console.log('Button Clicked');
+
+    const StartDate=First_Date.value;
+    const EndDate=Second_Date.value;
+
+    if(StartDate==='' || EndDate===''){
+        alert('Submit Date')
+    }else{
+        let Date1=new Date(StartDate)
+        let Date2=new Date(EndDate);
+    
+        console.log(StartDate,'Datatype: '+typeof StartDate)
+        console.log(EndDate,' Datatype: ',typeof EndDate)
+
+        console.log(Date1,'Datatype: '+typeof Date1)
+        console.log(Date2,' Datatype: ',typeof Date2)
+
+        console.log(Date1.getTime())
+        if(Date1.getTime() && Date2.getTime()){
+            let TimeDifferent=Date2.getTime()-Date1.getTime();
+            console.log('Time Different: '+TimeDifferent)
+
+            let DayDifferent=TimeDifferent/(1000*3600*24)
+            console.log('Day Different: '+DayDifferent)
+
+            if(DayDifferent>1){
+                DisplayDay.style.display='block'
+                DisplayDay.innerHTML=` ${DayDifferent} days Remaining`
+            }else if(DayDifferent<0){
+                DisplayDay.style.display='block'
+                DisplayDay.innerHTML=` Different ${DayDifferent*-1} day`
+            }
+            else{
+                DisplayDay.style.display='block'
+                DisplayDay.innerHTML=` ${DayDifferent} day Remaining`
+            }
+        }
+    }
+})
+///Date Distance End
