@@ -34,6 +34,7 @@ const UpdateClock=()=>{
     let All_Month=['January','February','March','April','May','June','July','August','September','October','November','December'];
     let Week=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
     document.getElementById('dayname').innerHTML=Week[dayName-1];
+    document.getElementById('month').innerHTML=All_Month[monthName];
     document.getElementById('daynum').innerHTML=dateName;
     document.getElementById('year').innerHTML=yearName;
     document.getElementById('_hour').innerHTML=hourName;
