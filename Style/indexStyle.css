@@ -20,7 +20,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    margin: 15px;
+    border-radius: 5px;
 }
 .Clock h2{
     text-transform: uppercase;
@@ -84,6 +85,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border-radius: 5px;
 }
 .DateTime{
     color: white;
