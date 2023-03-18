@@ -83,6 +83,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 .DateTime{
     color: white;
@@ -126,7 +127,7 @@
     background-color: #2E94E3;
     font-size: 30px;
     font-weight: 600;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     padding: 5px;
     border-radius: 3px;
 }
@@ -187,3 +188,34 @@
     font-size: 20px;
 }
 /* Date Distance End */
+
+
+/* Media Query Start */
+@media only screen and (max-width: 576px) {
+    .FirstClock{
+        margin: 10px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .Clock .Time div span{
+        width: 95px;
+        height: 60px;
+        font-size: 0.5em;
+        border-radius: 5px;
+    }
+    .DateTime{
+        width: 90%;
+        margin: 10px;
+    }
+    .Date{
+        font-size: 15px;
+    }
+    .Time{
+        font-size: 45px;
+    }
+    .Distance{
+       flex-direction: column;
+       align-items: center;
+    }
+}
+/* Media Query End */
